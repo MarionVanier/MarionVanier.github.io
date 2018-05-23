@@ -2,7 +2,7 @@
 <!DocType html>
 <html>
   
-  <title> Contact Me </title>
+  <title> Contact  </title>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,9 @@
     th {
     text-align: left;
 }
+	  td{
+	  	font-size: 8px;
+	  }
 	  
 /*forms Formatting */
 	  input[type=text], select {
@@ -58,16 +61,15 @@
   <body>
     
  
-    <h1> Contact Me <h1>
-      <p id="MyLocation">Click the button to get your position:</p>
+
       
 	    <form method="post"
   action="https://marionvanier.github.io">
 	    
       <table style="width:100%">
   <tr>
-    <th>Firstname (Required)</th>
-    <th><input type="text" name="FN" size="40"/></th> 
+    <td>Firstname (Required)</th>
+    <td><input type="text" name="FN" size="40"/></th> 
   </tr>
   <tr>
     <td>Lastname (Required)</td>
@@ -100,7 +102,8 @@
 
 </form>
       
-      
+          <h1> Contact Me <h1>
+      <p id="MyLocation">Click the button to get your position:</p>
       <button onclick="getLocation()">My Location</button>
       <div id="map" style="width:400px;height:400px;background:yellow"></div>
     
