@@ -57,6 +57,10 @@
     color: white;
 }    
   </style>
+	
+	<style type="text/css">
+#div1 {width:105px;height:50px;padding:10px;border:1px solid #aaaaaa;}
+</style>
   
 	   <div class="nav">
     <a href="https://marionvanier.github.io">Home</a>
@@ -99,6 +103,11 @@
   <tr>
   </tr>
 </table>
+<p>Captcha: Drag text into box</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br />
+<!--<img id="drag1" src=" logo\CIWLogo.png" alt="I am Not A Robot" draggable="true" ondragstart="drag(event)" width="336" height="69" />-->
+<p id="drag1" draggable="true" ondragstart="drag(event)"> I am not a robot </p>
 <input type="submit"/>
 <input type="reset"/>
 
@@ -147,6 +156,23 @@ switch(error.code)
 }
 }
 
+</script>
+	
+	<script type="text/javascript">
+function allowDrop(ev)
+{
+   ev.preventDefault();
+}
+function drag(ev)
+{
+   ev.dataTransfer.setData("Text",ev.target.id);
+}
+function drop(ev)
+{
+   var data=ev.dataTransfer.getData("Text");
+   ev.target.appendChild(document.getElementById(data));
+   ev.preventDefault();
+}
 </script>
       
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
